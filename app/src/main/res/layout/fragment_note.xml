@@ -19,4 +19,5 @@
             tools:listitem="@layout/list_item_note" />
 
     </FrameLayout>
+
 </layout>

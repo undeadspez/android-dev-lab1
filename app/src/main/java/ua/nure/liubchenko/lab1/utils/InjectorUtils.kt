@@ -11,5 +11,4 @@ object InjectorUtils {
         val repository = getNoteRepository()
         return NoteViewModelFactory(repository)
     }
-
 }
