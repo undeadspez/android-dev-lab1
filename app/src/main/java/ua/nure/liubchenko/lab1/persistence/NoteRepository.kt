@@ -1,8 +1,11 @@
 package ua.nure.liubchenko.lab1.persistence
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+
 class NoteRepository {
 
-    private val notes = arrayOf(
+    private val notes = listOf(
         Note("1", "Title 1", "Description 1"),
         Note("2", "Title 2", "Description 2"),
         Note("3", "Title 3", "Description 3"),
@@ -10,7 +13,7 @@ class NoteRepository {
         Note("5", "Title 5", "Description 5")
     )
 
-    fun getNotes() = notes
+    fun getNotes(): LiveData<List<Note>> = MutableLiveData(notes)
 
     companion object {
 
@@ -22,5 +25,4 @@ class NoteRepository {
             }
 
     }
-
 }
